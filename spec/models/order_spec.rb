@@ -28,6 +28,11 @@ RSpec.describe Order, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'expects amount to be number' do
+    subject.amount = 382.3
+    expect(subject).to be_valid
+  end
+
   it 'expects shopper_id to be a number' do
     subject.shopper_id = 213
     expect(subject).to be_valid
