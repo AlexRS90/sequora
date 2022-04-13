@@ -5,7 +5,7 @@ RSpec.describe Order, type: :model do
     Order.create(
       merchant_id: 25,
       shopper_id: 3351,
-      amount: 61.74,
+      amount: 61.74
     )
   end
 

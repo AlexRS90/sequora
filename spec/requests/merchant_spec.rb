@@ -18,7 +18,7 @@ RSpec.describe 'Merchant', type: :request do
       Order.create(
         merchant_id: 1,
         shopper_id: 1,
-        amount: 61.74,
+        amount: 61.74
       )
 
       get '/api/v1/week/1/merchant/1'
