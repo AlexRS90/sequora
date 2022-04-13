@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_13_175912) do
     t.bigint "merchant_id", null: false
     t.bigint "shopper_id", null: false
     t.decimal "amount"
+    t.datetime "completed_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["merchant_id"], name: "index_orders_on_merchant_id"
