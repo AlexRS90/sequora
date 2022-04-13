@@ -14,7 +14,7 @@ end
 csv_shoppers = File.read(Rails.root.join('db/shoppers.csv'))
 shopper = CSV.parse(csv_shoppers, headers: true, encoding: 'ISO-8859-1')
 
-merchant.each do |row|
+shopper.each do |row|
   record = Shopper.new
   record.name = row['name']
   record.email = row['email']
@@ -25,7 +25,7 @@ end
 csv_orders = File.read(Rails.root.join('db/orders.csv'))
 order = CSV.parse(csv_orders, headers: true, encoding: 'ISO-8859-1')
 
-merchant.each do |row|
+order.each do |row|
   record = Order.new
   record.merchant_id = row['merchant_id']
   record.shopper_id = row['shopper_id']
