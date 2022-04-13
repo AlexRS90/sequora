@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Shopper, type: :model do
   before do
-    Code.create(
+    Shopper.create(
       name: 'Olive Thompson',
       email: 'olive.thompson@not_gmail.com',
       cif: '411111111Z'

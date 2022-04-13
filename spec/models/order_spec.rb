@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Order, type: :model do
   before do
-    Code.create(
+    Order.create(
       merchant_id: 25,
       shopper_id: 3351,
       amount: 61.74,

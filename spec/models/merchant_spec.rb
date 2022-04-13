@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Merchant, type: :model do
   before do
-    Code.create(
+    Merchant.create(
       name: 'Treutel, Schumm and Fadel',
       email: 'info@treutel-schumm-and-fadel.com',
       cif: 'B611111111'
