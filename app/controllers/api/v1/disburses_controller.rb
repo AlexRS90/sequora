@@ -1,6 +1,5 @@
 class Api::V1::DisbursesController < ApplicationController
   def index
-    week = params[:week_num]
     merchants = Merchant.all
     render json: { status: 'success', data: merchants }, status: 200
   end
