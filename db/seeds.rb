@@ -29,7 +29,13 @@ order.each do |row|
   record = Order.new
   record.merchant_id = row['merchant_id']
   record.shopper_id = row['shopper_id']
-  record.amount = row['amoun']
+  if record.amount < 50
+    record.amount = row['amoun'] + (0.01 * row['amoun']) 
+  elsif record.amount > 300
+    record.amount = row['amoun'] + (0.0085 * row['amoun']) 
+  else
+    record.amount = row['amoun'] + (0.0095 * row['amoun']) 
+  end
   record.created_at = row['created_at']
   record.completed_at = row['completed_at']
   record.save
